@@ -33,5 +33,26 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 
 5. **Slack (Collaboration & Incident Communication)**  
    - **Description**: A messaging platform used by security teams for real-time collaboration, alerting, and incident response coordination.  
-   - **Use Case**: Integrating Slack with SOAR tools like Tines to automatically notify security teams when a critical security event occurs.  
+   - **Use Case**: Integrating Slack with SOAR tools like Tines to automatically notify security teams when a critical security event occurs.
+
+<br>
+
+## Table of Contents
+<table>
+  <tr>
+    <td rowspan="2"><b>Step 1</b></td>
+    <td rowspan="2">Design a Logic Diagram</td>
+    <td>1. Create playbook workflow</td>
+    
+  </tr>
+  <tr>
+    <td>2. Brainstorm playbook actions</td>
+  </tr>
+</table>
+
+<br>
+
+## Design a Logic Diagram
+Use [draw.io](https://app.diagrams.net/) to draw following diagram as below:
+
 
