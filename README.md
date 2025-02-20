@@ -55,4 +55,6 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 ## Design a Logic Diagram
 Use [draw.io](https://app.diagrams.net/) to draw following diagram as below:
 
+![Diagram drawio](https://github.com/user-attachments/assets/d647cac5-31c9-419b-9d55-947da5348a70)
+
 
