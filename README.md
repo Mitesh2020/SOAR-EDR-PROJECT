@@ -38,23 +38,27 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 <br>
 
 ## Table of Contents
-<table>
-  <tr>
-    <td rowspan="2"><b>Step 1</b></td>
-    <td rowspan="2">Design a Logic Diagram</td>
-    <td>1. Create playbook workflow</td>
-    
-  </tr>
-  <tr>
-    <td>2. Brainstorm playbook actions</td>
-  </tr>
-</table>
-
+1. [Design a Logic Diagram](#design-a-logic-diagram)
+   - Create playbook workflow
+   - Brainstorm playbook actions
+     
+2. [Setup LimaCharlie](#setup-limacharlie)
+   - Install and Setup LimaCharlie
+   - Confirm Events
+  
 <br>
 
 ## Design a Logic Diagram
 Use [draw.io](https://app.diagrams.net/) to draw following diagram as below:
 
 ![Diagram drawio](https://github.com/user-attachments/assets/d647cac5-31c9-419b-9d55-947da5348a70)
+
+[Back to top](table-of-contents)
+
+<br>
+
+## Setup LimaCharlie
+
+[Back to top](table-of-contents)
 
 
