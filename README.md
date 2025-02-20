@@ -1,5 +1,16 @@
 <h1 align="center">SOAR EDR PROJECT</h1>
 
+<h1 align="center">
+  
+[![Made With](https://img.shields.io/badge/Made%20With-6aff08)](http://www.firsttimersonly.com/)
+[![Limacharlie](https://img.shields.io/badge/Limacharlie-3e8dc9)](http://www.firsttimersonly.com/)
+[![Tines](https://img.shields.io/badge/Tines-383741)](http://www.firsttimersonly.com/)
+[![Slack](https://img.shields.io/badge/Slack-35b881)](http://www.firsttimersonly.com/)
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
+
+</h1>
+
 Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) for real-time threat detection and response. Learn how to configure, deploy, and enhance your cybersecurity posture with automation.
 <br>
 ### **Key Terminologies Before Starting the Project**  
