@@ -58,6 +58,32 @@ Use [draw.io](https://app.diagrams.net/) to draw following diagram as below:
 <br>
 
 ## Setup LimaCharlie
+Here’s your instruction with corrected grammar and clarity:
+
+---
+
+1. **Set up a Windows 10 VM** on VirtualBox or VMware.  
+2. **Open a browser** inside the Windows 10 VM and create an account at [LimaCharlie](https://app.limacharlie.io/).  
+3. After successfully logging in to LimaCharlie, **create an organization**.  
+4. On the left-hand side, click on **Sensors** → **Installation Keys** → Click on **Create Installation Key**.  
+5. In the **Description** field, enter any name and click the **Create** button.  
+6. You will see a key generated with the name you entered in the Description field.  
+7. Scroll down on the same page until you find **Sensors Download**.  
+8. Under **EDR**, right-click on **Windows 64-bit**, copy the link, and paste it into a new tab to download the agent.  
+9. Scroll back up and copy the **Sensor Key** from the generated Installation Key.  
+10. **Open PowerShell as Administrator**, then navigate to the directory where the agent was downloaded.  
+11. Run the following command:  
+    ```
+    your-agent-file.exe -i paste-sensor-key
+    ```
+    *(Replace `your-agent-file.exe` with the actual filename and `paste-sensor-key` with the copied Sensor Key.)*  
+12. To verify that the agent was installed successfully:  
+    - Go back to **LimaCharlie** in the browser.  
+    - Under **Sensors**, click on **Sensors List**.  
+    - If everything was done correctly, your Windows 10 VM's desktop name should appear in the list.  
+
+![image](https://github.com/user-attachments/assets/3fe33cf6-51f7-4865-8181-decd75f0642c)
+
 
 [Back to top](#table-of-contents)
 
