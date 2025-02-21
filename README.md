@@ -29,7 +29,7 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 
 4. **LimaCharlie (EDR & Security Infrastructure)**  
    - **Description**: A cloud-native security operations platform providing EDR, log collection, automation, and security tooling as a service.  
-   - **Use Case**: Deploying LimaCharlie agents across an enterprise to detect and respond to endpoint threats in real-time.  
+   - **Use Case**: Deploying LimaCharlie agents across an enterprise to detect and respond to endpoint threats in real time.  
 
 5. **Slack (Collaboration & Incident Communication)**  
    - **Description**: A messaging platform used by security teams for real-time collaboration, alerting, and incident response coordination.  
@@ -39,13 +39,17 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 
 ## Table of Contents
 1. [Design a Logic Diagram](#design-a-logic-diagram)
-   - Create playbook workflow
+   - Create a playbook workflow
    - Brainstorm playbook actions
      
 2. [Setup LimaCharlie](#setup-limacharlie)
    - Install and Setup LimaCharlie
    - Confirm Events
-  
+
+3. [Generate Telemetry](#generate-telemetry)
+   - Generate Telemetry using Lazagne (is an open-source tool used for extracting stored passwords from various applications on a system. It targets credentials saved in browsers, databases, Wi-Fi networks, and other applications.)
+   - Create Detection & Response Rule
+
 <br>
 
 ## Design a Logic Diagram
@@ -86,5 +90,13 @@ Here’s your instruction with corrected grammar and clarity:
 
 
 [Back to top](#table-of-contents)
+
+<br>
+
+## Generate Telemetry
+
+
+[Back to top](#table-of-contents)
+
 
 
