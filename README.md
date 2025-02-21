@@ -33,7 +33,19 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 
 5. **Slack (Collaboration & Incident Communication)**  
    - **Description**: A messaging platform used by security teams for real-time collaboration, alerting, and incident response coordination.  
-   - **Use Case**: Integrating Slack with SOAR tools like Tines to automatically notify security teams when a critical security event occurs.
+   - **Use Case**: Integrating Slack with SOAR tools like Tines to automatically notify security teams when a critical security event occurs.  
+
+6. **Playbook (Incident Response Workflow)**  
+   - **Description**: A structured set of predefined steps and actions that security teams follow to investigate and respond to specific security incidents.  
+   - **Use Case**: A phishing incident response playbook that includes automated email analysis, URL detonation, and employee notifications.  
+
+7. **Telemetry (Security Data Collection & Analysis)**  
+   - **Description**: The continuous collection, processing, and analysis of security-related data from various sources, such as endpoints, networks, and cloud environments.  
+   - **Use Case**: Using endpoint telemetry to detect and investigate anomalies, such as unauthorized process executions or unusual network connections.  
+
+8. **LaZagne (Credential Extraction Tool)**  
+   - **Description**: An open-source tool designed to retrieve stored passwords from various applications, including browsers, databases, and Wi-Fi networks.  
+   - **Use Case**: Running LaZagne on a compromised endpoint to extract stored credentials and assess the impact of a security breach.  
 
 <br>
 
@@ -47,7 +59,7 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
    - Confirm Events
 
 3. [Generate Telemetry](#generate-telemetry)
-   - Generate Telemetry using Lazagne (is an open-source tool used for extracting stored passwords from various applications on a system. It targets credentials saved in browsers, databases, Wi-Fi networks, and other applications.)
+   - Generate Telemetry using LaZagne
    - Create Detection & Response Rule
 
 <br>
