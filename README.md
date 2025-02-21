@@ -20,7 +20,7 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
    - **Use Case**: Automating phishing email analysis by extracting indicators, checking them against threat intelligence feeds, and triggering a response.  
 
 2. **EDR (Endpoint Detection and Response)**  
-   - **Description**: EDR solutions continuously monitor endpoints for suspicious activities, detect threats in real time, and provide automated or manual response options.  
+   - **Description**: EDR solutions continuously monitor endpoints for suspicious activities, detect threats in real-time, and provide automated or manual response options.  
    - **Use Case**: Detecting a compromised laptop executing malicious scripts and automatically isolating it from the network.  
 
 3. **Tines (SOAR Platform)**  
@@ -29,7 +29,7 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 
 4. **LimaCharlie (EDR & Security Infrastructure)**  
    - **Description**: A cloud-native security operations platform providing EDR, log collection, automation, and security tooling as a service.  
-   - **Use Case**: Deploying LimaCharlie agents across an enterprise to detect and respond to endpoint threats in real time.  
+   - **Use Case**: Deploying LimaCharlie agents across an enterprise to detect and respond to endpoint threats in real-time.  
 
 5. **Slack (Collaboration & Incident Communication)**  
    - **Description**: A messaging platform used by security teams for real-time collaboration, alerting, and incident response coordination.  
@@ -80,7 +80,7 @@ Here’s your instruction with corrected grammar and clarity:
 
 1. **Set up a Windows 10 VM** on VirtualBox or VMware.  
 2. **Open a browser** inside the Windows 10 VM and create an account at [LimaCharlie](https://app.limacharlie.io/).  
-3. After successfully logging in to LimaCharlie, **create an organization**.  
+3. After logging in to LimaCharlie, **create an organization**.  
 4. On the left-hand side, click on **Sensors** → **Installation Keys** → Click on **Create Installation Key**.  
 5. In the **Description** field, enter any name and click the **Create** button.  
 6. You will see a key generated with the name you entered in the Description field.  
@@ -105,8 +105,114 @@ Here’s your instruction with corrected grammar and clarity:
 
 <br>
 
-## Generate Telemetry
+Here’s your content with corrected grammar and improved clarity:  
 
+---
+
+## **Generate Telemetry**  
+
+1. **Download LaZagne**  
+   - Visit the [LaZagne GitHub page](https://github.com/AlessandroZ/LaZagne).  
+   - Navigate to **Releases** and download the `LaZagne.exe` file in your Windows 10 VM.  
+
+2. **Execute LaZagne**  
+   - Open **PowerShell as Administrator**.  
+   - Navigate to the directory where the `LaZagne.exe` file is downloaded.  
+   - Run the executable, and you should see an output similar to the one below:  
+
+   ![Screenshot from 2025-02-21 16-51-10](https://github.com/user-attachments/assets/01514cd8-3592-4814-ac34-068d2e3189e9)  
+
+3. **Verify Telemetry in LimaCharlie**  
+   - Open the browser and go to **LimaCharlie**.  
+   - Navigate to **Sensors** → **Sensors List**.  
+   - Click on your **Windows 10 desktop name**.  
+   - Go to **Timelines** and search for `"lazagne"`.  
+
+   ![Screenshot from 2025-02-21 17-00-49](https://github.com/user-attachments/assets/a1b932a0-4dd5-45f0-bcf9-ef2cb9ab7848)  
+
+4. **Create a Detection & Response (D&R) Rule**  
+   - Navigate to your **organization page** → **Automation** → **D&R Rules** → **New Rule**.  
+   - Name the rule as desired.  
+   - Under **Detect**, enter the following configuration:  
+
+   ```yaml
+   events:
+     - NEW_PROCESS
+     - EXISTING_PROCESS
+   op: and
+   rules:
+     - op: is windows
+     - op: or
+       rules:
+       - case sensitive: false
+         op: ends with
+         path: event/FILE_PATH
+         value: LaZagne.exe
+       - case sensitive: false
+         op: contains
+         path: event/COMMAND_LINE
+         value: LaZagne
+       - case sensitive: false
+         op: is
+         path: event/HASH
+         value: 'PASTE-YOUR-HASH-WE-SEEN-IN-STEP-3' 
+   ```
+
+   ![Screenshot from 2025-02-21 17-13-23](https://github.com/user-attachments/assets/057532ad-c885-4dab-978b-0368731d9507)  
+
+   - Replace **PASTE-YOUR-HASH-WE-SEEN-IN-STEP-3** with the actual hash observed in **Step 3**.  
+   - In this example, the hash value is:  
+     ```
+     467e49f1f795c1b08245ae621c59cdf06df630fc1631dc0059da9a032858a486
+     ```
+     *(Your hash will be different.)*  
+
+5. **Define the Response Action**  
+   - In the **Respond** field, enter the following:  
+
+   ```yaml
+   - action: report
+     metadata:
+       author: YOUR NAME
+       description: TEST - Detects LaZagne Usage
+       falsepositives:
+         - ToTheMoon
+       level: high
+       tags:
+         - attack.credential_access
+     name: YOUR NAME - HackTool - LaZagne
+   ```
+
+6. **Create the Rule**  
+   - Click the **Create** button to finalize the D&R rule.  
+
+7. **Test the Rule with a Sample Event**  
+   - Scroll down to **Target Event** on the same page.  
+   - Paste the event found in **Step 3**.  
+   - Click **Test Event**.  
+
+   ![Screenshot from 2025-02-21 17-21-04](https://github.com/user-attachments/assets/47b31109-1c93-459c-8938-3850e9cccbb9)  
+
+8. **Verify Rule Execution**  
+   - If configured correctly, clicking **Test Event** should yield the following output:  
+
+   ![Screenshot from 2025-02-21 17-24-00](https://github.com/user-attachments/assets/b8bec5dd-5ef5-4f5b-8644-a8807f848d4c)  
+
+9. **Trigger an Alert**  
+   - Open **PowerShell** again and execute the `LaZagne.exe` file.  
+   - Go back to **LimaCharlie** → **Organization Page** → **Detection**.  
+   - You should see an alert similar to this:  
+
+   ![Screenshot from 2025-02-21 17-29-06](https://github.com/user-attachments/assets/2a28ced0-e9c2-41a8-8201-128f4d1d4137)  
+
+10. **Troubleshooting: Missing VM in LimaCharlie Sensors**  
+    - If your Windows 10 VM is not appearing in the **Sensors List**, and no alerts/logs are being generated:  
+      - Open **Services** in Windows 10 VM.  
+      - Restart the **LimaCharlie process**.  
+
+    ![Screenshot from 2025-02-21 17-34-34](https://github.com/user-attachments/assets/af5d1e2f-e4d6-4f65-8612-04ed52f43bf2)  
+
+This should resolve the issue and allow your sensor to appear in **LimaCharlie**.  
 
 [Back to top](#table-of-contents)
 
