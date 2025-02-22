@@ -66,6 +66,14 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
    - Setup Slack and Tines
    - Test Connection (LimaCharIie + Tines)
 
+5. [Creating Playbooks](#creating-playbooks)
+   - Send a Slack message
+   - Send an Email
+     - Containing information about the detection
+   - Generate a user prompt
+     - Isolate the machine? (Yes/No)
+     - If YES - Isolate
+
 <br>
 
 ## Design a Logic Diagram
@@ -267,5 +275,10 @@ This ensures that LimaCharlie detections are correctly forwarded to Tines for fu
 
 [Back to top](#table-of-contents)
 
+<br>
+
+## Creating Playbooks
+
+[Back to top](#table-of-contents)
 
 
