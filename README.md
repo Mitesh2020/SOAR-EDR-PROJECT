@@ -222,7 +222,48 @@ This should resolve the issue and allow your sensor to appear in **LimaCharlie**
 
 <br>
 
-## Setup Slack and Tines
+Here's the corrected version with improved grammar and clarity:  
+
+---
+
+## **Setup Slack and Tines**  
+
+1. **Set Up Slack**  
+   - Create an account on [Slack](https://slack.com/).  
+   - Create a **workspace** with any name of your choice.  
+   - Create a **channel** named `"alerts"`.  
+
+   ![Screenshot from 2025-02-22 11-06-00](https://github.com/user-attachments/assets/7a9dbe46-ce66-4af4-8458-d90a0bb88e42)  
+
+2. **Configure Tines Webhook**  
+   - Create an account on [Tines](https://www.tines.com/).  
+   - Drag and drop a **Webhook** component.  
+   - Set the **Name** to `"Retrieve Detections"`.  
+   - Set the **Description** to `"Retrieve LimaCharlie Detections"`.  
+   - Copy the **Webhook URL**.  
+
+3. **Integrate LimaCharlie with Tines**  
+   - Go to the **LimaCharlie Organization Page**.  
+   - Scroll down to find **Outputs**.  
+   - Click **Add Output** → **Detections** → **Tines**.  
+   - Enter a **Name** of your choice.  
+   - In **Destination Host**, paste the **Webhook URL** copied from Tines.  
+   - Click **Save Output**.  
+
+4. **Trigger a Detection Event**  
+   - Open **PowerShell** and execute the `LaZagne.exe` file.  
+   - Go back to **LimaCharlie** and click on **Refresh Samples**.  
+   - You should see an output similar to this:  
+
+   ![Screenshot from 2025-02-22 11-18-00](https://github.com/user-attachments/assets/63609421-eb0f-4e32-bd56-53901a9eda6d)  
+
+5. **Verify Alerts in Tines**  
+   - In **Tines**, click on **Webhook** → **Events**.  
+   - Select the **first event**, where alerts have been successfully fetched from LimaCharlie to Tines.  
+
+   ![Screenshot from 2025-02-22 11-21-58](https://github.com/user-attachments/assets/63e0673d-20a7-4eff-a622-3946fba19fa4)  
+
+This ensures that LimaCharlie detections are correctly forwarded to Tines for further processing.  
 
 [Back to top](#table-of-contents)
 
