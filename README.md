@@ -62,6 +62,10 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
    - Generate Telemetry using LaZagne
    - Create Detection & Response Rule
 
+4. [Setup Slack and Tines](#setup-slack-and-tines)
+   - Setup Slack and Tines
+   - Test Connection (LimaCharIie + Tines)
+
 <br>
 
 ## Design a Logic Diagram
@@ -213,6 +217,12 @@ Here’s your content with corrected grammar and improved clarity:
     ![Screenshot from 2025-02-21 17-34-34](https://github.com/user-attachments/assets/af5d1e2f-e4d6-4f65-8612-04ed52f43bf2)  
 
 This should resolve the issue and allow your sensor to appear in **LimaCharlie**.  
+
+[Back to top](#table-of-contents)
+
+<br>
+
+## Setup Slack and Tines
 
 [Back to top](#table-of-contents)
 
