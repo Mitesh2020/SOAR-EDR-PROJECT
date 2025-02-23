@@ -73,6 +73,14 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
    - Generate a user prompt
      - Isolate the machine? (Yes/No)
      - If YES - Isolate
+6. [Project Walkthrough](#project-walkthrough)  
+   - Generate telemetry by executing `LaZagne.exe`.  
+   - An alert is generated in LimaCharlie.  
+   - LimaCharlie sends the output to Tines.  
+   - Tines distributes the output to Slack and Email.  
+   - Tines prompt the user to decide whether to isolate the machine (`Yes/No`).  
+   - If the user selects **No**, the machine is not isolated, and an alert is sent to Slack.  
+   - If the user selects **Yes**, the machine is isolated (unable to access the internet), and an alert is sent to Slack.  
 
 <br>
 
@@ -80,6 +88,8 @@ Automate security workflows by integrating LimaCharlie (EDR) with Tines (SOAR) f
 Use [draw.io](https://app.diagrams.net/) to draw following diagram as below:
 
 ![Diagram drawio](https://github.com/user-attachments/assets/d647cac5-31c9-419b-9d55-947da5348a70)
+
+[Watch Tutorial](https://youtu.be/OirFGI-34Ko?si=NjFbiLTxY1b-p71u)
 
 [Back to top](#table-of-contents)
 
@@ -112,6 +122,7 @@ Here’s your instruction with corrected grammar and clarity:
 
 ![image](https://github.com/user-attachments/assets/3fe33cf6-51f7-4865-8181-decd75f0642c)
 
+[Watch Tutorial](https://youtu.be/WPyJR7Y3qb4?si=lB_PGJUpRp2B96ms)
 
 [Back to top](#table-of-contents)
 
@@ -226,6 +237,8 @@ Here’s your content with corrected grammar and improved clarity:
 
 This should resolve the issue and allow your sensor to appear in **LimaCharlie**.  
 
+[Watch Tutorial](https://youtu.be/sLNYileYwD8?si=jKSE3P8dOrhsKA_Y)
+
 [Back to top](#table-of-contents)
 
 <br>
@@ -273,12 +286,24 @@ Here's the corrected version with improved grammar and clarity:
 
 This ensures that LimaCharlie detections are correctly forwarded to Tines for further processing.  
 
+[Watch Tutorial](https://youtu.be/uI-ueDf_3hg?si=kvNcNUyr27m0800i)
+
 [Back to top](#table-of-contents)
 
 <br>
 
 ## Creating Playbooks
 
+![Your first story-storyboard](https://github.com/user-attachments/assets/b729a8a9-ed0c-46ba-9d95-42616474a618)
+
+[Watch Tutorial](https://youtu.be/RR4tfMMkIPY?si=i96AvzFaNCI-vIc)
+
 [Back to top](#table-of-contents)
+
+<br>
+
+## Project Walkthrough
+
+
 
 
