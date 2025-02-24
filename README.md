@@ -303,7 +303,7 @@ This ensures that LimaCharlie detections are correctly forwarded to Tines for fu
 <br>
 
 ## Project Walkthrough
-[Video](https://drive.google.com/file/d/1iips7rqpk-TaQcCbnOhpxHFiCPE1qbQj/view?usp=sharing)
+[Video](https://www.linkedin.com/posts/mitesh-rathod-8023b7176_cybersecurity-edr-soar-activity-7299838844558884866-RFOU?utm_source=share&utm_medium=member_desktop&rcm=ACoAACm0ssIBOBWbkshsqVX12ufF-kk1t1afM4Q)
 
 [Back to top](#table-of-contents)
 
